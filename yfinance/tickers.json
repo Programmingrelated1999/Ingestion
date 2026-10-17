@@ -1,0 +1,26 @@
+[
+  {
+    "name": "S&P 500 UCITS ETF",
+    "ticker": "VUSA.L"
+  },
+  {
+    "name": "FTSE 100 UCITS ETF",
+    "ticker": "VUKE.L"
+  },
+  {
+    "name": "iShares Core UK Gilts UCITS ETF GBP (Dist)",
+    "ticker": "IGLT.L"
+  },
+  {
+    "name": "iShares Physical Gold ETC",
+    "ticker": "SGLN.L"
+  },
+  {
+    "name": "WisdomTree Enhanced Commodity UCITS ETF - GBP Hedged Acc",
+    "ticker": "WCOM.L"
+  },
+  {
+    "name": "iShares $ Treasury Bond 7-10yr UCITS ETF GBP Hedged", 
+    "ticker": "IGTM.L"
+  }
+]
