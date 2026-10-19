@@ -1,7 +1,7 @@
 import json, yfinance as yf
 from pathlib import Path
 import pandas as pd
-from app.database import save_tickers
+from app.database import connect_db, save_tickers
 
 # Return 10 Years Data, Weekly Interval
 def get_stock_data_by_batch(tickers, period, interval):
@@ -24,7 +24,7 @@ def main():
     
     # Get Stock Data 
     tickets_data = get_stock_data_by_batch(tickers, period='10y', interval='1d')
-    save_tickers(tickets_data)    
+    db = connect_db; save_tickers(db, tickets_data)    
 
 if __name__ == '__main__':
     main()

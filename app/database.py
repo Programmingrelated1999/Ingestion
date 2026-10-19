@@ -11,8 +11,8 @@ def connect_db():
     db = adb.Arctic(arcticdb_local_uri)
     return db
 
-def save_tickers(tickers):
-    db = connect_db()
+# Save Tickers In Database 
+def save_tickers(db, tickers):
     lib = db.get_library('daily_price', create_if_missing=True) 
     for ticker, df in tickers.items():
         lib.write(ticker, df, metadata={"source": "yfinance", "auto_adjust": False})
@@ -25,7 +25,8 @@ def delete_library(db, name):
     else: 
         print(f"Library '{name}' does not exists.")
 
-def main():
+# For Testing Purpose
+def _tester():
     db = connect_db()
     lib = db["daily_price"] 
     print(lib.list_symbols())
@@ -34,4 +35,4 @@ def main():
     print(df.tail())
 
 if __name__ == "__main__":
-    main()
+    _tester()
