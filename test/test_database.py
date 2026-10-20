@@ -25,4 +25,3 @@ def test_non_existing_library(db, capsys):
     delete_library(db, "helloworld")
     captured = capsys.readouterr()
     assert captured.out == f"Library 'helloworld' does not exists.\n"
-

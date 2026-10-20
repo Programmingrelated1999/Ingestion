@@ -1,6 +1,14 @@
 from fastapi import FastAPI
+import logging
 
+# Create FastAPI App
 app = FastAPI()
+
+# Configure Logging 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
 
 @app.get("/")
 def read_root():
